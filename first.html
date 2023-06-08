@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Webpage</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My first web page</h1>
+    <h3>What this is</h3>
+    <p>
+      Welcome to my first webpage. I created this webpage without assistance of
+      a webpage editor. Just my text editor and keen
+      <i class="b"><strong>understanding of html</strong></i>
+    </p>
+    <h3>Why this is</h3>
+    <ul class="list">
+      <li>To learn html</li>
+      <li>List Elements</li>
+      <ol>
+        <li>Home</li>
+        <li>FAQ</li>
+        <li>Contact</li>
+        <li>About</li>
+      </ol>
+      <li>Here I have created ordered and unordered list</li>
+    </ul>
+    <h3>ZeusLearning.com</h3>
+    <a href="https://www.zeuslearning.com/" target="_blank"
+      >This link will open zeuslearning.com in a new tab</a
+    >
+    <h3>On click of following image navigate to Google.com</h3>
+    <a href="https://www.google.com/" target="_blank"
+      ><img src="google.png" style="width: 20%"
+    /></a>
+    <h2>Some Random table</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th>Row 1, Cell 1</th>
+          <th>Row 1, Cell 2</th>
+          <th>Row 1, Cell 3</th>
+        </tr>
+        <tr>
+          <th>Row 2, Cell 1</th>
+          <th>Row 2, Cell 2</th>
+          <th>Row 2, Cell 3</th>
+        </tr>
+        <tr>
+          <th>Row 3, Cell 1</th>
+          <th>Row 3, Cell 2</th>
+          <th>Row 3, Cell 3</th>
+        </tr>
+      </tbody>
+    </table>
+    <h2>Some random form</h2>
+    <p>
+      <i class="b"><strong>Note</strong></i
+      >: It looks the part but won't do anything
+    </p>
+    <form name="myForm" action="" onsubmit="return validateForm()">
+      <div class="form-control">
+        <label for="name">Name</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your Name"
+        /><small id="nameError" class="error"></small><br />
+      </div>
+      <div class="form-control">
+        <label for="comments">Comments</label><br />
+        <textarea
+          id="comments"
+          name="comments"
+          rows="4"
+          cols="35"
+          placeholder="Your comments"
+        ></textarea
+        ><small id="commentError" class="error"></small><br />
+      </div>
+
+      <div class="form-control">
+        <p>Are You:</p>
+        <small id="genderError" class="error"></small><br />
+          <input type="radio" id="male" name="gender" value="male" />  
+        <label for="html">Male</label><br />
+          <input type="radio" id="female" name="gender" value="female" />  
+        <label for="css">Female</label><br /><br />
+      </div>
+      <input type="submit" value="Submit Query" />
+    </form>
+
+    <script>
+      let name = document.getElementById("name");
+      let comments = document.getElementById("comments");
+      let f = 1;
+
+      function validateForm() {
+        if (name.value == "") {
+          document.getElementById("nameError").innerHTML = "*Not a valid name";
+          alert("All fields are compulsory");
+          f = 0;
+        } else {
+          document.getElementById("nameError").innerHTML = "";
+        }
+
+        if (comments.value == "") {
+          document.getElementById("commentError").innerHTML = "*Please comment";
+          alert("All fields are compulsory");
+          f = 0;
+        } else {
+          document.getElementById("nameError").innerHTML = "";
+        }
+
+        let c = false;
+        let male = document.getElementById("male");
+        let female = document.getElementById("female");
+        if (male.checked == true) {
+          f = 1;
+        } else if (female.checked == true) {
+          f = 1;
+        } else {
+          document.getElementById("genderError").innerHTML =
+            "*Please select a gender";
+          alert("All fields are compulsory");
+          f = 0;
+        }
+
+        if (f) {
+          return true;
+        }
+        return false;
+      }
+    </script>
+  </body>
+</html>

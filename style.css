@@ -1,0 +1,47 @@
+body{
+    background-color: lightgoldenrodyellow;
+}
+
+h1{
+    background-color: red;
+    border-bottom: 10px solid rgb(151, 18, 18);
+    color: lightgoldenrodyellow;
+    text-align: center;
+    padding: auto;
+    font-style: italic;
+    letter-spacing: 3px;
+}
+
+h3{
+    background-color: green;
+    color: white;
+    padding: 10px;
+}
+
+h2{
+    color: grey;
+}
+
+table{
+    background-color: grey;
+}
+
+.list{
+    color: red;
+    font-style: italic;
+}
+
+a{
+    text-decoration: none;
+}
+.b{
+    text-transform: uppercase;
+}
+
+img{
+    border: 1px dashed black;
+}
+
+.error{
+    color: red;
+}
